@@ -1,0 +1,35 @@
+<hazelcast xmlns="http://www.hazelcast.com/schema/config"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://www.hazelcast.com/schema/config
+           http://www.hazelcast.com/schema/config/hazelcast-config-3.11.xsd">
+
+    <!-- makes sure only caching-example services form a distributed cache cluster -->
+    <group>
+        <name>order-service</name>
+    </group>
+
+    <!-- To put it briefly, Hazelcast maps have no restrictions on the size and may grow arbitrarily large, by default.
+    When it comes to reducing the size of a map, there are two concepts: expiration and eviction. -->
+
+    <map name="default">
+        <time-to-live-seconds>600</time-to-live-seconds>
+    </map>
+
+    <cache name="default">
+        <!-- does not work-->
+        <eviction size="3" max-size-policy="ENTRY_COUNT" eviction-policy="LRU" />
+
+        <!--<statistics-enabled>true</statistics-enabled>-->
+        <!--<management-enabled>true</management-enabled>-->
+    </cache>
+
+    <network>
+        <join>
+            <multicast enabled="false"/>
+            <tcp-ip enabled="true">
+                <interface>127.0.0.1</interface>
+            </tcp-ip>
+        </join>
+    </network>
+
+</hazelcast>

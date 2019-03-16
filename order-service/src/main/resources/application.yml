@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: order-service
+
+  cache:
+    type: hazelcast
+
+  hazelcast:
+    config: classpath:hazelcast.xml
