@@ -40,7 +40,7 @@ class CustomerRestController {
 }
 
 @Component
-@CacheConfig(cacheNames = "countries")
+@CacheConfig(cacheNames = "customers")
 class CustomerRepository {
 
     @Cacheable

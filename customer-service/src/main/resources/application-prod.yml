@@ -2,6 +2,3 @@ spring:
   cache:
     type: hazelcast
 
-  hazelcast:
-    config: classpath:hazelcast.xml
-

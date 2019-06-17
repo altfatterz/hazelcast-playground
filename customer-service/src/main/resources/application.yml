@@ -15,4 +15,6 @@ management:
     git:
       mode: full
 
-
+logging:
+  level:
+    com.hazelcast: DEBUG

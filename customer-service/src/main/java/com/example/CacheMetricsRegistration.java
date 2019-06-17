@@ -4,7 +4,6 @@ import org.springframework.boot.actuate.metrics.cache.CacheMetricsRegistrar;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.cache.Cache;
 import org.springframework.cache.CacheManager;
-import org.springframework.context.annotation.Profile;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
@@ -13,7 +12,6 @@ import org.springframework.stereotype.Component;
  */
 
 @Component
-@Profile("prod")
 public class CacheMetricsRegistration {
 
     private final CacheMetricsRegistrar cacheMetricsRegistrar;
@@ -27,7 +25,7 @@ public class CacheMetricsRegistration {
 
     @EventListener(ApplicationReadyEvent.class) // can this be delayed until the cache is created dynamically?
     public void register() {
-        Cache countries = this.cacheManager.getCache("countries");
-        this.cacheMetricsRegistrar.bindCacheToRegistry(countries);
+        Cache customers = this.cacheManager.getCache("customers");
+        this.cacheMetricsRegistrar.bindCacheToRegistry(customers);
     }
 }
