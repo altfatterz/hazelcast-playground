@@ -9,24 +9,25 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>hazelcast-playground-starter</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>hazelcast-playground-starter</name>
+    <artifactId>hazelcast-playground-starter-cache</artifactId>
 
     <dependencies>
 
         <dependency>
-            <groupId>com.example</groupId>
-            <artifactId>hazelcast-playground-autoconfigure</artifactId>
-            <version>${project.version}</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-cache</artifactId>
         </dependency>
-
         <dependency>
-            <groupId>com.example</groupId>
-            <artifactId>hazelcast-playground-starter-cache</artifactId>
-            <version>${project.version}</version>
+            <groupId>com.hazelcast</groupId>
+            <artifactId>hazelcast-spring</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.hazelcast</groupId>
+            <artifactId>hazelcast-eureka-one</artifactId>
+            <version>1.1.1</version>
         </dependency>
 
     </dependencies>
+
 
 </project>

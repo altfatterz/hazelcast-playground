@@ -1,17 +1,23 @@
-package com.example;
+package com.example.hazelcast;
 
 import com.hazelcast.config.Config;
 import com.hazelcast.core.Hazelcast;
+import com.hazelcast.core.HazelcastInstance;
 import com.hazelcast.eureka.one.EurekaOneDiscoveryStrategyFactory;
 import com.netflix.discovery.EurekaClient;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
+//@ConditionalOnClass(Hazelcast::class)
+//@ConditionalOnMissingBean(HazelcastInstance::class)
 public class HazelcastConfiguration {
 
     @Bean
+//    @ConditionalOnBean(EurekaClient::class)
     public Config hazelcastConfig(EurekaClient eurekaClient) {
         EurekaOneDiscoveryStrategyFactory.setEurekaClient(eurekaClient);
         Config config = new Config();
