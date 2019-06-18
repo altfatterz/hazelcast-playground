@@ -17,7 +17,7 @@
     <properties>
         <java.version>1.8</java.version>
 
-        <spring-boot-admin.version>2.1.3</spring-boot-admin.version>
+        <spring-boot-admin-client.version>2.1.5</spring-boot-admin-client.version>
     </properties>
 
     <dependencies>
@@ -48,7 +48,7 @@
         <dependency>
             <groupId>de.codecentric</groupId>
             <artifactId>spring-boot-admin-starter-client</artifactId>
-            <version>${spring-boot-admin.version}</version>
+            <version>${spring-boot-admin-client.version}</version>
         </dependency>
 
         <dependency>
@@ -68,6 +68,17 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>build-info</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>pl.project13.maven</groupId>
+                <artifactId>git-commit-id-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
