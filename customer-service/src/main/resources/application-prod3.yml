@@ -1,9 +1,0 @@
-spring:
-  profiles:
-    include: prod
-
-server:
-  port: 9093
-
-logging:
-  file: target/customer-service3.log

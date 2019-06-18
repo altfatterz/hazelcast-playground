@@ -4,3 +4,6 @@ spring:
 
   cache:
     type: hazelcast
+
+server:
+  port: 9095
