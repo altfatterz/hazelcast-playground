@@ -19,6 +19,8 @@
         <module>customer-service</module>
         <module>order-service</module>
         <module>spring-boot-admin</module>
+
+        <module>hazelcast-playground-starter-parent</module>
     </modules>
 
 </project>
