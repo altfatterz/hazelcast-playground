@@ -7,8 +7,8 @@ $ spring cloud eureka
 2. Start up 2 instances of `customer-service`
 
 ```bash
-$ java -jar target/customer-service*.jar --server.port=9091
-$ java -jar target/customer-service*.jar --server.port=9092
+$ java -jar target/customer-service-0.0.1-SNAPSHOT.jar --server.port=9091
+$ java -jar target/customer-service-0.0.1-SNAPSHOT.jar --server.port=9092
 ```
 
 They will join a `Hazelcast` cluster
@@ -23,7 +23,7 @@ Members {size:2, ver:4} [
 3. Start up an instance of `order-service`
 
 ```bash
-$ java -jar target/order-service*.jar
+$ java -jar target/order-service-0.0.1-SNAPSHOT.jar
 ```
 
 This will create its own `Hazelcast` cluster
