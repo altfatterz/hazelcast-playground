@@ -12,12 +12,12 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-//@ConditionalOnClass(Hazelcast::class)
-//@ConditionalOnMissingBean(HazelcastInstance::class)
+@ConditionalOnClass(Hazelcast.class)
+@ConditionalOnMissingBean(HazelcastInstance.class)
 public class HazelcastConfiguration {
 
     @Bean
-//    @ConditionalOnBean(EurekaClient::class)
+    @ConditionalOnBean(EurekaClient.class)
     public Config hazelcastConfig(EurekaClient eurekaClient) {
         EurekaOneDiscoveryStrategyFactory.setEurekaClient(eurekaClient);
         Config config = new Config();
