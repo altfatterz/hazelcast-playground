@@ -17,7 +17,7 @@ import org.springframework.context.annotation.Configuration;
 public class HazelcastConfiguration {
 
     @Bean
-    @ConditionalOnBean(EurekaClient.class)
+    @ConditionalOnClass(EurekaClient.class)
     public Config hazelcastConfig(EurekaClient eurekaClient) {
         EurekaOneDiscoveryStrategyFactory.setEurekaClient(eurekaClient);
         Config config = new Config();
