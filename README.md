@@ -90,6 +90,16 @@ Loading customer with id '1' into cache
 
 #### Monitoring
 
+Start up the `management-center` with
+
+```bash
+$ java -jar hazelcast-mancenter-3.12.war 8080 hazelcast-mancenter
+```
+
+This will create a folder `<user-home>/hazelcast-mc`
+
+Set a username and password: hazelcast/s3cr3t!!
+
 You can use the use the [Management Center](https://hazelcast.org/download/#management-center) provided by Hazelcast
 
 ![hazelcast-management-center.png](images/hazelcast-management-center.png)
@@ -100,3 +110,5 @@ Resources:
 
 1. https://hazelcast.com/blog/hazelcast-auto-discovery-with-eureka/
 2. https://codeboje.de/caching-spring-boot/
+3. https://medium.com/@igorkosandyak/spring-boot-with-hazelcast-b04d13927745
+4. https://stackoverflow.com/questions/51344193/speeding-up-netflix-eureka-unregistration-not-working-for-spring-boot
