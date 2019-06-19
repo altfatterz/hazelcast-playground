@@ -4,3 +4,6 @@ spring:
 
     # this does not work for hazelcast, the cache is not created on startup, see CacheProperties
     cache-names: customers
+
+server:
+  port: 9091
