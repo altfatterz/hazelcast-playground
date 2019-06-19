@@ -1,3 +1,5 @@
+#### Getting started
+
 1. Start Eureka
 
 ```bash
@@ -86,6 +88,13 @@ Loading customer with id '1' into cache
 ...
 ```
 
+#### Monitoring
+
+You can use the use the [Management Center](https://hazelcast.org/download/#management-center) provided by Hazelcast
+
+![hazelcast-management-center.png](images/hazelcast-management-center.png)
+
+However is only free to use for clusters of 2 members only.
 
 Resources:
 
