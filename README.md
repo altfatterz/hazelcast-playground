@@ -38,6 +38,54 @@ Members {size:1, ver:1} [
 
 ![eureka.png](images/eureka.png)
 
+5. Test caching
+
+Fetch two customers:
+
+```bash
+$ http :9091/customers/1
+$ http :9091/customers/2
+```
+
+You should see in the logs
+
+```bash
+...
+Loading customer with id '1' into cache
+...
+Loading customer with id '2' into cache
+...
+```
+
+Update the customer with id '1'
+
+```bash
+$ echo '{"name":"zoltan"}' | http put :9091/customers/1
+```
+
+In the logs:
+
+```bash
+...
+Removing customer with id '1' from the cache
+...
+```
+
+Fetching again the customer with id '1' and '2'
+
+```bash
+$ http :9091/customers/1
+$ http :9091/customers/2
+```
+
+In the logs you should see a log statement for customer with id '1' only. 
+
+```bash
+...
+Loading customer with id '1' into cache
+...
+```
+
 
 Resources:
 
