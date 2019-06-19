@@ -42,3 +42,4 @@ Members {size:1, ver:1} [
 Resources:
 
 1. https://hazelcast.com/blog/hazelcast-auto-discovery-with-eureka/
+2. https://codeboje.de/caching-spring-boot/

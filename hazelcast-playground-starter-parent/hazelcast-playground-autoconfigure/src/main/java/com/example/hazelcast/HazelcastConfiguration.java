@@ -5,15 +5,16 @@ import com.hazelcast.core.Hazelcast;
 import com.hazelcast.core.HazelcastInstance;
 import com.hazelcast.eureka.one.EurekaOneDiscoveryStrategyFactory;
 import com.netflix.discovery.EurekaClient;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ConditionalOnClass(Hazelcast.class)
 @ConditionalOnMissingBean(HazelcastInstance.class)
+@ConditionalOnProperty(value = "spring.cache.type", havingValue = "hazelcast", matchIfMissing = true)
 public class HazelcastConfiguration {
 
     @Bean

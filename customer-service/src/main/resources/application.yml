@@ -17,7 +17,7 @@ management:
 
 logging:
   level:
-    com.hazelcast: DEBUG
+    com.hazelcast: INFO
 
 
 info.doc: http//docs.your-service.com

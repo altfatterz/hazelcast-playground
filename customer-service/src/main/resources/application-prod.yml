@@ -1,4 +1,0 @@
-spring:
-  cache:
-    type: hazelcast
-
