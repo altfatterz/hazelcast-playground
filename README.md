@@ -112,3 +112,4 @@ Resources:
 2. https://codeboje.de/caching-spring-boot/
 3. https://medium.com/@igorkosandyak/spring-boot-with-hazelcast-b04d13927745
 4. https://stackoverflow.com/questions/51344193/speeding-up-netflix-eureka-unregistration-not-working-for-spring-boot
+5. https://www.foreach.be/blog/spring-cache-annotations-some-tips-tricks
