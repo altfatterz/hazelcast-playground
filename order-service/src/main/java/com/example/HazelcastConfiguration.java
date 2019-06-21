@@ -23,7 +23,6 @@ public class HazelcastConfiguration {
         config.getNetworkConfig().getJoin().getMulticastConfig().setEnabled(false);
         config.getNetworkConfig().getJoin().getEurekaConfig()
                 .setEnabled(true)
-                //.setUsePublicIp(true)
                 .setProperty("self-registration", "true")
                 .setProperty("namespace", "hazelcast")
                 .setProperty("use-metadata-for-host-and-port", "true");
