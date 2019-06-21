@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: eureka-server
+
+server:
+  port: 8761
+
+# side effect is that when you hover over the mouse it will be visible the ip address
+#eureka:
+#  instance:
+#    prefer-ip-address: true
