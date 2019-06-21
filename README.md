@@ -98,7 +98,13 @@ $ java -jar hazelcast-mancenter-3.12.war 8080 hazelcast-mancenter
 
 This will create a folder `<user-home>/hazelcast-mc`
 
-Set a username and password: hazelcast/s3cr3t!!
+```bash
+$ docker run -p 8080:8080 hazelcast/management-center:3.12.1
+```
+
+URL: `http://localhost:8080/hazelcast-mancenter`
+
+Set a username and password: `hazelcast/s3cr3t!!`
 
 You can use the use the [Management Center](https://hazelcast.org/download/#management-center) provided by Hazelcast
 
