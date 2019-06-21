@@ -6,6 +6,8 @@ import com.netflix.discovery.EurekaClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import java.util.Arrays;
+
 @Configuration
 public class HazelcastConfiguration {
 
@@ -14,9 +16,9 @@ public class HazelcastConfiguration {
         EurekaOneDiscoveryStrategyFactory.setEurekaClient(eurekaClient);
         Config config = new Config();
 
-        config.getManagementCenterConfig().setEnabled(true);
-        config.getManagementCenterConfig().setUrl("http://localhost:8080/hazelcast-mancenter/");
-
+        // this works locally, we can control the ips used by hazelcast. Check your `ifconfig` and put and ip which you like to use for Hazelcast
+        config.getNetworkConfig().getInterfaces().setEnabled(true)
+                .setInterfaces(Arrays.asList("192.*.*.*"));
 
         config.getNetworkConfig().getJoin().getMulticastConfig().setEnabled(false);
         config.getNetworkConfig().getJoin().getEurekaConfig()
