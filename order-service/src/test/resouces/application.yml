@@ -1,0 +1,9 @@
+spring:
+  cache:
+    type: none
+
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false

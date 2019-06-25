@@ -3,7 +3,23 @@ spring:
     name: order-service
 
   cache:
-    type: hazelcast
+    type: caffeine
+    # will be created upfront, no need to use @CacheConfig. It doesn't work this with Hazelcast
+    # It also doesn't work when programmatically creating caches
+    cache-names: foos
+
+
+management:
+  endpoints:
+    web:
+      exposure.include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS
+  info:
+    git:
+      mode: full
+
 
 server:
   port: 9095

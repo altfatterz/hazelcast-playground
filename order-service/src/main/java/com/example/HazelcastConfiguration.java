@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 
 import java.util.Arrays;
 
-@Configuration
+//@Configuration
 public class HazelcastConfiguration {
 
     @Bean
