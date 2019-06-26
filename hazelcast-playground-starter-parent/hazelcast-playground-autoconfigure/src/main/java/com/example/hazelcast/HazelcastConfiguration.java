@@ -35,6 +35,8 @@ public class HazelcastConfiguration {
 
         config.addMapConfig(mapConfig);
 
+        config.getMapConfig("default").setTimeToLiveSeconds(3600);
+
         config.getNetworkConfig().getJoin().getMulticastConfig().setEnabled(false);
         config.getNetworkConfig().getJoin().getEurekaConfig()
                 .setEnabled(true)

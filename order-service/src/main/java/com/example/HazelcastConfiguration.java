@@ -2,7 +2,6 @@ package com.example;
 
 import com.hazelcast.config.Config;
 import com.hazelcast.config.EvictionPolicy;
-import com.hazelcast.config.MapConfig;
 import com.hazelcast.config.MaxSizeConfig;
 import com.hazelcast.eureka.one.EurekaOneDiscoveryStrategyFactory;
 import com.netflix.discovery.EurekaClient;
@@ -11,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
 
 import java.util.Arrays;
 
-//@Configuration
+@Configuration
 public class HazelcastConfiguration {
 
     @Bean
