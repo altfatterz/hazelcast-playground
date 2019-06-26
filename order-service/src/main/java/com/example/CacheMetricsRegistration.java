@@ -23,12 +23,12 @@ public class CacheMetricsRegistration {
 
     @EventListener(ApplicationReadyEvent.class) // can this be delayed until the cache is created dynamically?
     public void register() {
-        Cache customers = this.cacheManager.getCache("customers");
-        Cache orders = this.cacheManager.getCache("orders");
+        Cache foo = this.cacheManager.getCache("foo");
+        Cache bar = this.cacheManager.getCache("bar");
 
         Tag tag = new ImmutableTag("cacheManager", "cacheManager");
 
-        this.cacheMetricsRegistrar.bindCacheToRegistry(customers, tag);
-        this.cacheMetricsRegistrar.bindCacheToRegistry(orders, tag);
+        this.cacheMetricsRegistrar.bindCacheToRegistry(foo, tag);
+        this.cacheMetricsRegistrar.bindCacheToRegistry(bar, tag);
     }
 }

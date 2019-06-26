@@ -66,13 +66,6 @@ class BarService {
 
 }
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-class Bar {
-    private String id;
-    private String name;
-}
 
 @Slf4j
 @Service
@@ -100,18 +93,3 @@ class FooService {
 
 }
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-class Foo {
-    private String id;
-    private String name;
-}
-
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-class Baz {
-    private String a;
-    private String b;
-}
