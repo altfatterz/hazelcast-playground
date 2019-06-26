@@ -16,6 +16,10 @@ management:
     git:
       mode: full
 
+  metrics:
+    # common tags that are applied to every meter needed by https://grafana.com/dashboards/4701
+    tags:
+      application: ${spring.application.name}
 
 server:
   port: 9095

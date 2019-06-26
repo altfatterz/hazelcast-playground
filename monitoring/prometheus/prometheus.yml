@@ -1,0 +1,18 @@
+global:
+  scrape_interval:   15s # By default, scrape targets every 15 seconds.
+
+scrape_configs:
+- job_name:       'development'
+
+  # Override the global default and scrape targets from this job every 10 seconds.
+  scrape_interval: 10s
+  metrics_path: '/actuator/prometheus'
+
+  # scheme defaults to 'http'
+  static_configs:
+  - targets: ['192.168.0.159:9095']
+    labels:
+      service: '1'
+  - targets: ['192.168.0.159:9096']
+    labels:
+      service: '2'
